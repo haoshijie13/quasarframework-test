@@ -33,9 +33,13 @@
     </q-page-container>
   </q-layout>
 
-  <div class="q-pa-md" style="max-width: 350px">
-    <q-list  padding>
-
+  <div class="q-pa-md" style="max-width: 350px" >
+    <q-scroll-area 
+    :thumb-style="thumbStyle"
+    :content-style="contentStyle"
+    :content-active-style="contentActiveStyle"
+    style="height: 180px; max-width: 300px;" visible="visible" >
+    <q-list  padding class="row no-wrap">
       <q-item-section top thumbnail class="q-ml-none">
         <q-btn color="white" >
           <div>
@@ -51,22 +55,9 @@
           </div>
         </q-btn>
         </q-item-section>
-
     </q-list>
+    </q-scroll-area>
   </div>
-
-  <q-virtual-scroll
-    :items="heavyList"
-    virtual-scroll-horizontal
-    v-slot="{ item, index }"
-  >
-    <div
-      :key="index"
-      :class="item.class"
-    >
-      #{{ index }} - {{ item.label }}
-    </div>
-  </q-virtual-scroll>
 
 </template>
 
@@ -138,6 +129,24 @@ export default defineComponent({
     const leftDrawerOpen = ref(false);
 
     return {
+      contentStyle: {
+        backgroundColor: 'rgba(0,0,0,0.02)',
+        color: '#555',
+        borderColor: '#027be3'
+      },
+
+      contentActiveStyle: {
+        backgroundColor: '#eee',
+        color: 'black'
+      },
+
+      thumbStyle: {
+        right: '2px',
+        borderRadius: '5px',
+        backgroundColor: '#027be3',
+        width: '5px',
+        opacity: '0.75'
+      },
       essentialLinks: linksList,
       heavyList,
       leftDrawerOpen,
