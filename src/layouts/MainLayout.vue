@@ -20,7 +20,6 @@
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
         <q-item-label header>Essential Links</q-item-label>
-
         <EssentialLink
           v-for="link in essentialLinks"
           :key="link.title"
@@ -33,6 +32,42 @@
       <router-view />
     </q-page-container>
   </q-layout>
+
+  <div class="q-pa-md" style="max-width: 350px">
+    <q-list  padding>
+
+      <q-item-section top thumbnail class="q-ml-none">
+        <q-btn color="white" >
+          <div>
+          <img src="~assets/quasar-logo-inner.svg" style="width:128px;height:128px;"/>
+          </div>
+        </q-btn>
+        </q-item-section>
+
+        <q-item-section top thumbnail class="q-ml-none">
+        <q-btn color="white" >
+          <div>
+          <img src="~assets/quasar-logo-inner.svg" style="width:128px;height:128px;"/>
+          </div>
+        </q-btn>
+        </q-item-section>
+
+    </q-list>
+  </div>
+
+  <q-virtual-scroll
+    :items="heavyList"
+    virtual-scroll-horizontal
+    v-slot="{ item, index }"
+  >
+    <div
+      :key="index"
+      :class="item.class"
+    >
+      #{{ index }} - {{ item.label }}
+    </div>
+  </q-virtual-scroll>
+
 </template>
 
 <script>
@@ -83,7 +118,15 @@ const linksList = [
     link: 'https://awesome.quasar.dev',
   },
 ];
+const maxSize = 10000
+const heavyList = []
 
+for (let i = 0; i < maxSize; i++) {
+  heavyList.push({
+    label: 'Option ' + (i + 1),
+    class: i % 2 === 0 ? 'q-pa-md self-center bg-grey-2 text-black' : 'q-pa-lg bg-black text-white'
+  })
+}
 export default defineComponent({
   name: 'MainLayout',
 
@@ -96,6 +139,7 @@ export default defineComponent({
 
     return {
       essentialLinks: linksList,
+      heavyList,
       leftDrawerOpen,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
