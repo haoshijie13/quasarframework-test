@@ -38,7 +38,7 @@
     :content-active-style="contentActiveStyle"
     style="height: 130px; max-width: 800px; " visible="visible" @scroll="scrollHandler">
       <q-list  padding class="row no-wrap" >
-        <q-item-section top thumbnail class="q-ml-none">
+        <q-item-section top thumbnail class="q-ml-sm">
           <q-btn color="white" >
             <div>
             <img src="~assets/quasar-logo-inner.svg" style="width:90px;height:90px;"/>
@@ -74,7 +74,7 @@
     :content-active-style="contentActiveStyle"
     style="height: 130px; max-width: 800px; " visible="visible" @scroll="scrollHandler">
     <q-list  padding class="row no-wrap" >
-      <q-item-section top thumbnail class="q-ml-none">
+      <q-item-section top thumbnail class="q-ml-sm">
         <q-btn color="white" >
           <div>
           <img src="~assets/quasar-logo-inner.svg" style="width:90px;height:90px;"/>
@@ -110,7 +110,7 @@
     :content-active-style="contentActiveStyle"
     style="height: 130px; max-width: 800px; " visible="visible" @scroll="scrollHandler">
     <q-list  padding class="row no-wrap" >
-      <q-item-section top thumbnail class="q-ml-none">
+      <q-item-section top thumbnail class="q-ml-sm">
         <q-btn color="white" >
           <div>
           <img src="~assets/quasar-logo-inner.svg" style="width:90px;height:90px;"/>
