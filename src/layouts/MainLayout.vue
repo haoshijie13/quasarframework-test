@@ -28,7 +28,48 @@
       </q-list>
     </q-drawer>
   <q-page-container>
-  <div class="q-pa-md" style="max-width: 500px;width: 600px" >
+  <q-space/>
+  <div class="row">
+  <div class="col" style="max-width: 500px; width: 600px">
+    <q-scroll-area 
+    :thumb-style="thumbStyle"
+    :content-style="contentStyle"
+    :content-active-style="contentActiveStyle"
+    style="height: 180px; max-width: 800px;"
+    visible="visible" @scroll="scrollHandler">
+    <q-list  padding class="row no-wrap" >
+      <q-item-section top thumbnail class="q-ml-none">
+        <q-btn color="white" >
+          <div>
+          <img src="~assets/quasar-logo-inner.svg" style="width:128px;height:128px;"/>
+          </div>
+        </q-btn>
+        </q-item-section>
+
+        <q-item-section top thumbnail class="q-ml-none">
+        <q-btn color="white" >
+          <div>
+          <img src="~assets/quasar-logo-inner.svg" style="width:128px;height:128px;"/>
+          </div>
+        </q-btn>
+        </q-item-section>
+
+        <q-item-section top thumbnail class="q-ml-none">
+        <q-btn color="white" >
+          <div>
+          <img src="~assets/quasar-logo-inner.svg" style="width:128px;height:128px;"/>
+          </div>
+        </q-btn>
+        </q-item-section>
+
+    </q-list>
+    <q-scroll-observer axis="horizontal" @scroll="scrollHandler" />
+    </q-scroll-area >
+  </div>
+
+  <q-space/>
+
+  <div class="col" style="max-width: 500px;width: 600px;">
     <q-scroll-area 
     :thumb-style="thumbStyle"
     :content-style="contentStyle"
@@ -64,12 +105,12 @@
     </q-scroll-area >
   </div>
 
-  <div class="q-pa-md" style="max-width: 500px;width: 600px" >
+  <div class="col" style="max-width: 500px; width: 600px">
     <q-scroll-area 
     :thumb-style="thumbStyle"
     :content-style="contentStyle"
     :content-active-style="contentActiveStyle"
-    style="height: 180px; max-width: 800px;" visible="visible" @scroll="scrollHandler">
+    style="height: 180px; max-width: 800px; " visible="visible" @scroll="scrollHandler">
     <q-list  padding class="row no-wrap" >
       <q-item-section top thumbnail class="q-ml-none">
         <q-btn color="white" >
@@ -98,6 +139,7 @@
     </q-list>
     <q-scroll-observer axis="horizontal" @scroll="scrollHandler" />
     </q-scroll-area >
+  </div>
   </div>
 
   </q-page-container>
@@ -174,13 +216,12 @@ export default defineComponent({
     return {
       contentStyle: {
         backgroundColor: 'rgba(0,0,0,0.02)',
-        color: '#555',
-        borderColor: '#027be3'
+        color: 'red-1'
       },
 
-      contentActiveStyle: {
+      contentActiveStyle: { 
         backgroundColor: '#eee',
-        color: 'black'
+        color: 'red-1'
       },
 
       thumbStyle: {
@@ -190,6 +231,7 @@ export default defineComponent({
         width: '5px',
         opacity: '0.75'
       },
+
       essentialLinks: linksList,
       heavyList,
       leftDrawerOpen,
