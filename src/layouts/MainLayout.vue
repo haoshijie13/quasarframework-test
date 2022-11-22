@@ -30,18 +30,18 @@
   <q-page-container>
   <q-space/>
   <div class="row">
-  <div class="col" style="max-width: 500px; width: 600px">
+
+<div class="col q-mt-md q-ml-sm" style="max-width: 500px; width: 600px">
     <q-scroll-area 
     :thumb-style="thumbStyle"
     :content-style="contentStyle"
     :content-active-style="contentActiveStyle"
-    style="height: 180px; max-width: 800px;"
-    visible="visible" @scroll="scrollHandler">
+    style="height: 130px; max-width: 800px; " visible="visible" @scroll="scrollHandler">
     <q-list  padding class="row no-wrap" >
       <q-item-section top thumbnail class="q-ml-none">
         <q-btn color="white" >
           <div>
-          <img src="~assets/quasar-logo-inner.svg" style="width:128px;height:128px;"/>
+          <img src="~assets/quasar-logo-inner.svg" style="width:90px;height:90px;"/>
           </div>
         </q-btn>
         </q-item-section>
@@ -49,7 +49,7 @@
         <q-item-section top thumbnail class="q-ml-none">
         <q-btn color="white" >
           <div>
-          <img src="~assets/quasar-logo-inner.svg" style="width:128px;height:128px;"/>
+          <img src="~assets/quasar-logo-inner.svg" style="width:90px;height:90px;"/>
           </div>
         </q-btn>
         </q-item-section>
@@ -57,7 +57,7 @@
         <q-item-section top thumbnail class="q-ml-none">
         <q-btn color="white" >
           <div>
-          <img src="~assets/quasar-logo-inner.svg" style="width:128px;height:128px;"/>
+          <img src="~assets/quasar-logo-inner.svg" style="width:90px;height:90px;"/>
           </div>
         </q-btn>
         </q-item-section>
@@ -67,19 +67,17 @@
     </q-scroll-area >
   </div>
 
-  <q-space/>
-
-  <div class="col" style="max-width: 500px;width: 600px;">
+  <div class="col q-mt-md q-ml-sm" style="max-width: 500px; width: 600px">
     <q-scroll-area 
     :thumb-style="thumbStyle"
     :content-style="contentStyle"
     :content-active-style="contentActiveStyle"
-    style="height: 180px; max-width: 800px;" visible="visible" @scroll="scrollHandler">
+    style="height: 130px; max-width: 800px; " visible="visible" @scroll="scrollHandler">
     <q-list  padding class="row no-wrap" >
       <q-item-section top thumbnail class="q-ml-none">
         <q-btn color="white" >
           <div>
-          <img src="~assets/quasar-logo-inner.svg" style="width:128px;height:128px;"/>
+          <img src="~assets/quasar-logo-inner.svg" style="width:90px;height:90px;"/>
           </div>
         </q-btn>
         </q-item-section>
@@ -87,7 +85,7 @@
         <q-item-section top thumbnail class="q-ml-none">
         <q-btn color="white" >
           <div>
-          <img src="~assets/quasar-logo-inner.svg" style="width:128px;height:128px;"/>
+          <img src="~assets/quasar-logo-inner.svg" style="width:90px;height:90px;"/>
           </div>
         </q-btn>
         </q-item-section>
@@ -95,7 +93,7 @@
         <q-item-section top thumbnail class="q-ml-none">
         <q-btn color="white" >
           <div>
-          <img src="~assets/quasar-logo-inner.svg" style="width:128px;height:128px;"/>
+          <img src="~assets/quasar-logo-inner.svg" style="width:90px;height:90px;"/>
           </div>
         </q-btn>
         </q-item-section>
@@ -105,17 +103,17 @@
     </q-scroll-area >
   </div>
 
-  <div class="col" style="max-width: 500px; width: 600px">
+  <div class="col q-mt-md q-ml-sm" style="max-width: 500px; width: 600px">
     <q-scroll-area 
     :thumb-style="thumbStyle"
     :content-style="contentStyle"
     :content-active-style="contentActiveStyle"
-    style="height: 180px; max-width: 800px; " visible="visible" @scroll="scrollHandler">
+    style="height: 130px; max-width: 800px; " visible="visible" @scroll="scrollHandler">
     <q-list  padding class="row no-wrap" >
       <q-item-section top thumbnail class="q-ml-none">
         <q-btn color="white" >
           <div>
-          <img src="~assets/quasar-logo-inner.svg" style="width:128px;height:128px;"/>
+          <img src="~assets/quasar-logo-inner.svg" style="width:90px;height:90px;"/>
           </div>
         </q-btn>
         </q-item-section>
@@ -123,7 +121,7 @@
         <q-item-section top thumbnail class="q-ml-none">
         <q-btn color="white" >
           <div>
-          <img src="~assets/quasar-logo-inner.svg" style="width:128px;height:128px;"/>
+          <img src="~assets/quasar-logo-inner.svg" style="width:90px;height:90px;"/>
           </div>
         </q-btn>
         </q-item-section>
@@ -131,7 +129,7 @@
         <q-item-section top thumbnail class="q-ml-none">
         <q-btn color="white" >
           <div>
-          <img src="~assets/quasar-logo-inner.svg" style="width:128px;height:128px;"/>
+          <img src="~assets/quasar-logo-inner.svg" style="width:90px;height:90px;"/>
           </div>
         </q-btn>
         </q-item-section>
@@ -140,6 +138,7 @@
     <q-scroll-observer axis="horizontal" @scroll="scrollHandler" />
     </q-scroll-area >
   </div>
+  
   </div>
 
   </q-page-container>
@@ -227,7 +226,7 @@ export default defineComponent({
       thumbStyle: {
         right: '2px',
         borderRadius: '5px',
-        backgroundColor: '#027be3',
+        backgroundColor: '#095231',
         width: '5px',
         opacity: '0.75'
       },
