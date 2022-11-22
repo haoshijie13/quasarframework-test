@@ -27,19 +27,14 @@
         />
       </q-list>
     </q-drawer>
-
-    <q-page-container>
-      <router-view />
-    </q-page-container>
-  </q-layout>
-
-  <div class="q-pa-md" style="max-width: 350px" >
+  <q-page-container>
+  <div class="q-pa-md" style="max-width: 500px;width: 600px" >
     <q-scroll-area 
     :thumb-style="thumbStyle"
     :content-style="contentStyle"
     :content-active-style="contentActiveStyle"
-    style="height: 180px; max-width: 300px;" visible="visible" >
-    <q-list  padding class="row no-wrap">
+    style="height: 180px; max-width: 800px;" visible="visible" @scroll="scrollHandler">
+    <q-list  padding class="row no-wrap" >
       <q-item-section top thumbnail class="q-ml-none">
         <q-btn color="white" >
           <div>
@@ -55,10 +50,58 @@
           </div>
         </q-btn>
         </q-item-section>
+
+        <q-item-section top thumbnail class="q-ml-none">
+        <q-btn color="white" >
+          <div>
+          <img src="~assets/quasar-logo-inner.svg" style="width:128px;height:128px;"/>
+          </div>
+        </q-btn>
+        </q-item-section>
+
     </q-list>
-    </q-scroll-area>
+    <q-scroll-observer axis="horizontal" @scroll="scrollHandler" />
+    </q-scroll-area >
   </div>
 
+  <div class="q-pa-md" style="max-width: 500px;width: 600px" >
+    <q-scroll-area 
+    :thumb-style="thumbStyle"
+    :content-style="contentStyle"
+    :content-active-style="contentActiveStyle"
+    style="height: 180px; max-width: 800px;" visible="visible" @scroll="scrollHandler">
+    <q-list  padding class="row no-wrap" >
+      <q-item-section top thumbnail class="q-ml-none">
+        <q-btn color="white" >
+          <div>
+          <img src="~assets/quasar-logo-inner.svg" style="width:128px;height:128px;"/>
+          </div>
+        </q-btn>
+        </q-item-section>
+
+        <q-item-section top thumbnail class="q-ml-none">
+        <q-btn color="white" >
+          <div>
+          <img src="~assets/quasar-logo-inner.svg" style="width:128px;height:128px;"/>
+          </div>
+        </q-btn>
+        </q-item-section>
+
+        <q-item-section top thumbnail class="q-ml-none">
+        <q-btn color="white" >
+          <div>
+          <img src="~assets/quasar-logo-inner.svg" style="width:128px;height:128px;"/>
+          </div>
+        </q-btn>
+        </q-item-section>
+
+    </q-list>
+    <q-scroll-observer axis="horizontal" @scroll="scrollHandler" />
+    </q-scroll-area >
+  </div>
+
+  </q-page-container>
+  </q-layout>
 </template>
 
 <script>
