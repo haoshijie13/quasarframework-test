@@ -37,33 +37,33 @@
     :content-style="contentStyle"
     :content-active-style="contentActiveStyle"
     style="height: 130px; max-width: 800px; " visible="visible" @scroll="scrollHandler">
-    <q-list  padding class="row no-wrap" >
-      <q-item-section top thumbnail class="q-ml-none">
-        <q-btn color="white" >
-          <div>
-          <img src="~assets/quasar-logo-inner.svg" style="width:90px;height:90px;"/>
-          </div>
-        </q-btn>
+      <q-list  padding class="row no-wrap" >
+        <q-item-section top thumbnail class="q-ml-none">
+          <q-btn color="white" >
+            <div>
+            <img src="~assets/quasar-logo-inner.svg" style="width:90px;height:90px;"/>
+            </div>
+          </q-btn>
         </q-item-section>
 
         <q-item-section top thumbnail class="q-ml-none">
-        <q-btn color="white" >
-          <div>
-          <img src="~assets/quasar-logo-inner.svg" style="width:90px;height:90px;"/>
-          </div>
-        </q-btn>
+          <q-btn color="white" >
+            <div>
+            <img src="~assets/quasar-logo-inner.svg" style="width:90px;height:90px;"/>
+            </div>
+          </q-btn>
         </q-item-section>
 
         <q-item-section top thumbnail class="q-ml-none">
-        <q-btn color="white" >
-          <div>
-          <img src="~assets/quasar-logo-inner.svg" style="width:90px;height:90px;"/>
-          </div>
-        </q-btn>
+          <q-btn color="white" >
+            <div>
+            <img src="~assets/quasar-logo-inner.svg" style="width:90px;height:90px;"/>
+            </div>
+          </q-btn>
         </q-item-section>
 
-    </q-list>
-    <q-scroll-observer axis="horizontal" @scroll="scrollHandler" />
+      </q-list>
+      <q-scroll-observer axis="horizontal" @scroll="scrollHandler" />
     </q-scroll-area >
   </div>
 
@@ -214,7 +214,7 @@ export default defineComponent({
 
     return {
       contentStyle: {
-        backgroundColor: 'rgba(0,0,0,0.02)',
+        backgroundColor: 'blue',
         color: 'red-1'
       },
 
